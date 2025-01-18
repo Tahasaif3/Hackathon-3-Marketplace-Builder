@@ -33,7 +33,7 @@ export default function OrderSummary({ cartItems, total, shippingCost }: OrderSu
               <h3 className="text-sm font-medium text-gray-900 truncate">{item.name}</h3>
               <p className="text-sm text-gray-500">Quantity: {item.quantity}</p>
               <p className="text-sm font-medium text-gray-900">
-                ${((item.salePrice || item.price) * item.quantity).toFixed(2)}
+                ${((item.originalPrice || item.price) * item.quantity).toFixed(2)}
               </p>
             </div>
           </div>

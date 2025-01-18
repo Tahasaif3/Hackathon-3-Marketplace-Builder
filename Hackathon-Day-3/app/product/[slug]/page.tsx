@@ -17,13 +17,24 @@ async function getProduct(slug: string): Promise<Product> {
   }`, { slug })
 }
 
-export default async function ProductPage({ params }: { params: { slug: string }}) {
-  const product = await getProduct(params.slug)
+// export default async function ProductPage({ params }: { params: { slug: string }}) {
+//   const product = await getProduct(params.slug)
+
+//   if (!product) {
+//     return <div>Product not found</div>
+//   }
+
+//   return <ProductDetailClient product={product} />
+// }
+
+export default async function ProductPage({ params }: { params: { slug: string } }) {
+  const product = await getProduct((params as { slug: string }).slug);
 
   if (!product) {
-    return <div>Product not found</div>
+    return <div>Product not found</div>;
   }
 
-  return <ProductDetailClient product={product} />
+  return <ProductDetailClient product={product} />;
 }
+
 

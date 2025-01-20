@@ -1,0 +1,445 @@
+[
+  {
+    "name": "Fresh Lime",
+    "slug": {
+      "current": "fresh-lime"
+    },
+    "category": "Drink",
+    "price": 38.0,
+    "originalPrice": 45.0,
+    "tags": ["Healthy", "Popular"],
+    "image": "http://localhost:3000/food/food-1.png",
+    "description": "Refre-shing fresh lime drink made with natural ingredients.",
+    "available": true
+  },
+  {
+    "name": "Chocolate Muffin",
+    "slug": {
+      "current": "chocolate-muffin"
+    },
+    "category": "Dessert",
+    "price": 28.0,
+    "originalPrice": 30.0,
+    "tags": ["Sell", "Sweet"],
+    "image": "http://localhost:3000/food/food-2.png",
+    "description": "Soft and rich chocolate muffin topped with chocolate chips.",
+    "available": true
+  },
+  {
+    "name": "Burger",
+    "slug": {
+      "current": "burger"
+    },
+    "category": "Sandwich",
+    "price": 21.0,
+    "originalPrice": 45.0,
+    "tags": ["Popular"],
+    "image": "http://localhost:3000/food/food-3.png",
+    "description": "Juicy beef burger with fresh lettuce, tomatoes, and cheese.",
+    "available": true
+  },
+  {
+    "name": "Country Burger",
+    "slug": {
+      "current": "country-burger"
+    },
+    "category": "Sandwich",
+    "price": 45.0,
+    "originalPrice": 50.0,
+    "tags": ["Recommended"],
+    "image": "http://localhost:3000/food/food-4.png",
+    "description": "Classic country-style burger served with fries.",
+    "available": true
+  },
+  {
+    "name": "Pizza",
+    "slug": {
+      "current": "pizza"
+    },
+    "category": "Main Course",
+    "price": 43.0,
+    "originalPrice": 50.0,
+    "tags": ["Cheesy", "Vegetarian"],
+    "image": "http://localhost:3000/food/food-5.png",
+    "description": "Delicious vegetarian pizza topped with fresh vegetables and cheese.",
+    "available": true
+  },
+  {
+    "name": "Chicken Chup",
+    "slug": {
+      "current": "chicken-chup"
+    },
+    "category": "Appetizer",
+    "price": 12.0,
+    "originalPrice": 15.0,
+    "tags": ["Sell", "Crispy"],
+    "image": "http://localhost:3000/food/food-6.png",
+    "description": "Crispy fried chicken bites served with dipping sauce.",
+    "available": true
+  },
+  {
+    "name": "Caesar Salad",
+    "slug": {
+      "current": "caesar-salad"
+    },
+    "category": "Salad",
+    "price": 32.0,
+    "originalPrice": 35.0,
+    "tags": ["Healthy", "Fresh"],
+    "image": "http://localhost:3000/food/food-7.jpg",
+    "description": "Fresh romaine lettuce with Caesar dressing, croutons, and parmesan cheese.",
+    "available": true
+  },
+  {
+    "name": "Spaghetti Carbonara",
+    "slug": {
+      "current": "spaghetti-carbonara"
+    },
+    "category": "Main Course",
+    "price": 48.0,
+    "originalPrice": 55.0,
+    "tags": ["Italian", "Creamy"],
+    "image": "http://localhost:3000/food/food-8.jpg",
+    "description": "Classic Italian pasta dish with eggs, cheese, pancetta, and black pepper.",
+    "available": true
+  },
+  {
+    "name": "Iced Coffee",
+    "slug": {
+      "current": "iced-coffee"
+    },
+    "category": "Drink",
+    "price": 25.0,
+    "originalPrice": 30.0,
+    "tags": ["Refreshing", "Caffeinated"],
+    "image": "http://localhost:3000/food/food-9.webp",
+    "description": "Chilled coffee served over ice, perfect for a hot day.",
+    "available": true
+  },
+  {
+    "name": "Fruit Tart",
+    "slug": {
+      "current": "fruit-tart"
+    },
+    "category": "Dessert",
+    "price": 36.0,
+    "originalPrice": 40.0,
+    "tags": ["Sweet", "Fruity"],
+    "image": "http://localhost:3000/food/food-10.jpg",
+    "description": "Buttery pastry crust filled with custard and topped with fresh seasonal fruits.",
+    "available": true
+  },
+  {
+    "name": "Grilled Salmon",
+    "slug": {
+      "current": "grilled-salmon"
+    },
+    "category": "Main Course",
+    "price": 58.0,
+    "originalPrice": 65.0,
+    "tags": ["Healthy", "Seafood"],
+    "image": "http://localhost:3000/food/food-11.jpg",
+    "description": "Perfectly grilled salmon fillet served with steamed vegetables and lemon butter sauce.",
+    "available": true
+  },
+  {
+    "name": "Mushroom Risotto",
+    "slug": {
+      "current": "mushroom-risotto"
+    },
+    "category": "Main Course",
+    "price": 46.0,
+    "originalPrice": 50.0,
+    "tags": ["Vegetarian", "Creamy"],
+    "image": "http://localhost:3000/food/food-12.jpg",
+    "description": "Creamy Italian rice dish cooked with a variety of mushrooms and parmesan cheese.",
+    "available": true
+  },
+  {
+    "name": "Avocado Toast",
+    "slug": {
+      "current": "avocado-toast"
+    },
+    "category": "Breakfast",
+    "price": 22.0,
+    "originalPrice": 25.0,
+    "tags": ["Healthy", "Trendy"],
+    "image": "https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Toasted artisan bread topped with mashed avocado, cherry tomatoes, and a poached egg.",
+    "available": true
+  },
+  {
+    "name": "Beef Tacos",
+    "slug": {
+      "current": "beef-tacos"
+    },
+    "category": "Main Course",
+    "price": 35.0,
+    "originalPrice": 40.0,
+    "tags": ["Mexican", "Spicy"],
+    "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Three soft corn tortillas filled with seasoned ground beef, lettuce, cheese, and pico de gallo.",
+    "available": true
+  },
+  {
+    "name": "Matcha Latte",
+    "slug": {
+      "current": "matcha-latte"
+    },
+    "category": "Drink",
+    "price": 30.0,
+    "originalPrice": 35.0,
+    "tags": ["Japanese", "Antioxidant"],
+    "image": "https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Smooth and creamy latte made with high-grade matcha green tea powder and steamed milk.",
+    "available": true
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "slug": {
+      "current": "chicken-tikka-masala"
+    },
+    "category": "Main Course",
+    "price": 52.0,
+    "originalPrice": 60.0,
+    "tags": ["Indian", "Spicy"],
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Tender chicken pieces in a rich and creamy tomato-based sauce, served with basmati rice.",
+    "available": true
+  },
+  {
+    "name": "Greek Salad",
+    "slug": {
+      "current": "greek-salad"
+    },
+    "category": "Salad",
+    "price": 38.0,
+    "originalPrice": 45.0,
+    "tags": ["Mediterranean", "Healthy"],
+    "image": "https://images.unsplash.com/photo-1515516969-d4008cc6241a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Fresh salad with cucumbers, tomatoes, olives, feta cheese, and red onions, dressed with olive oil.",
+    "available": true
+  },
+  {
+    "name": "Chocolate Lava Cake",
+    "slug": {
+      "current": "chocolate-lava-cake"
+    },
+    "category": "Dessert",
+    "price": 32.0,
+    "originalPrice": 35.0,
+    "tags": ["Decadent", "Sweet"],
+    "image": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Warm chocolate cake with a gooey molten chocolate center, served with vanilla ice cream.",
+    "available": true
+  },
+  {
+    "name": "Vegetable Stir Fry",
+    "slug": {
+      "current": "vegetable-stir-fry"
+    },
+    "category": "Main Course",
+    "price": 40.0,
+    "originalPrice": 45.0,
+    "tags": ["Vegetarian", "Asian"],
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Colorful mix of fresh vegetables stir-fried in a savory sauce, served over steamed rice.",
+    "available": true
+  },
+  {
+    "name": "Mango Smoothie",
+    "slug": {
+      "current": "mango-smoothie"
+    },
+    "category": "Drink",
+    "price": 28.0,
+    "originalPrice": 32.0,
+    "tags": ["Fruity", "Refreshing"],
+    "image": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Creamy smoothie made with ripe mangoes, yogurt, and a hint of honey.",
+    "available": true
+  },
+  {
+    "name": "Eggs Benedict",
+    "slug": {
+      "current": "eggs-benedict"
+    },
+    "category": "Breakfast",
+    "price": 42.0,
+    "originalPrice": 48.0,
+    "tags": ["Classic", "Brunch"],
+    "image": "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Poached eggs and Canadian bacon on English muffins, topped with hollandaise sauce.",
+    "available": true
+  },
+  {
+    "name": "Caprese Sandwich",
+    "slug": {
+      "current": "caprese-sandwich"
+    },
+    "category": "Sandwich",
+    "price": 34.0,
+    "originalPrice": 38.0,
+    "tags": ["Italian", "Vegetarian"],
+    "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Fresh mozzarella, tomatoes, and basil leaves on ciabatta bread, drizzled with balsamic glaze.",
+    "available": true
+  },
+  {
+    "name": "Shrimp Scampi",
+    "slug": {
+      "current": "shrimp-scampi"
+    },
+    "category": "Main Course",
+    "price": 56.0,
+    "originalPrice": 65.0,
+    "tags": ["Seafood", "Garlic"],
+    "image": "https://images.unsplash.com/photo-1633504581786-316c8002b1b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Succulent shrimp sautéed in a garlic butter sauce, served over a bed of linguine pasta.",
+    "available": true
+  },
+  {
+    "name": "Sushi Roll Platter",
+    "slug": { "current": "sushi-roll-platter" },
+    "category": "Main Course",
+    "price": 65.0,
+    "originalPrice": 75.0,
+    "tags": ["Japanese", "Seafood"],
+    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Assorted sushi rolls including California, spicy tuna, and vegetable rolls.",
+    "available": true
+  },
+  {
+    "name": "Beef Pho",
+    "slug": { "current": "beef-pho" },
+    "category": "Soup",
+    "price": 42.0,
+    "originalPrice": 48.0,
+    "tags": ["Vietnamese", "Comfort Food"],
+    "image": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Traditional Vietnamese noodle soup with tender beef slices and aromatic herbs.",
+    "available": true
+  },
+  {
+    "name": "Margherita Pizza",
+    "slug": { "current": "margherita-pizza" },
+    "category": "Main Course",
+    "price": 39.0,
+    "originalPrice": 45.0,
+    "tags": ["Italian", "Vegetarian"],
+    "image": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Classic pizza with tomato sauce, fresh mozzarella, basil, and extra virgin olive oil.",
+    "available": true
+  },
+  {
+    "name": "Acai Bowl",
+    "slug": { "current": "acai-bowl" },
+    "category": "Breakfast",
+    "price": 32.0,
+    "originalPrice": 36.0,
+    "tags": ["Healthy", "Superfood"],
+    "image": "https://images.unsplash.com/photo-1590301157890-4810ed352733?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Blended acai berries topped with granola, fresh fruits, and a drizzle of honey.",
+    "available": true
+  },
+  {
+    "name": "Beef Lasagna",
+    "slug": { "current": "beef-lasagna" },
+    "category": "Main Course",
+    "price": 48.0,
+    "originalPrice": 55.0,
+    "tags": ["Italian", "Comfort Food"],
+    "image": "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Layers of pasta, seasoned ground beef, ricotta, and mozzarella cheese in tomato sauce.",
+    "available": true
+  },
+  {
+    "name": "Pad Thai",
+    "slug": { "current": "pad-thai" },
+    "category": "Main Course",
+    "price": 38.0,
+    "originalPrice": 42.0,
+    "tags": ["Thai", "Stir-Fry"],
+    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Stir-fried rice noodles with shrimp, tofu, peanuts, bean sprouts, and tamarind sauce.",
+    "available": true
+  },
+  {
+    "name": "Tiramisu",
+    "slug": { "current": "tiramisu" },
+    "category": "Dessert",
+    "price": 28.0,
+    "originalPrice": 32.0,
+    "tags": ["Italian", "Coffee"],
+    "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.",
+    "available": true
+  },
+  {
+    "name": "Chicken Shawarma",
+    "slug": { "current": "chicken-shawarma" },
+    "category": "Sandwich",
+    "price": 36.0,
+    "originalPrice": 40.0,
+    "tags": ["Middle Eastern", "Spicy"],
+    "image": "https://images.unsplash.com/photo-1561651823-34feb02250e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Marinated chicken wrapped in pita bread with vegetables and garlic sauce.",
+    "available": true
+  },
+  {
+    "name": "Lobster Bisque",
+    "slug": { "current": "lobster-bisque" },
+    "category": "Soup",
+    "price": 52.0,
+    "originalPrice": 60.0,
+    "tags": ["Seafood", "Creamy"],
+    "image": "https://images.unsplash.com/photo-1594756202469-9ff9799b2e4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Rich and creamy soup made with lobster stock, cream, and chunks of tender lobster meat.",
+    "available": true
+  },
+  {
+    "name": "Falafel Plate",
+    "slug": { "current": "falafel-plate" },
+    "category": "Main Course",
+    "price": 34.0,
+    "originalPrice": 38.0,
+    "tags": ["Middle Eastern", "Vegetarian"],
+    "image": "https://images.unsplash.com/photo-1593001874117-c99c800e3eb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Crispy chickpea fritters served with hummus, tahini sauce, and a fresh Mediterranean salad.",
+    "available": true
+  },
+  {
+    "name": "Beef Wellington",
+    "slug": { "current": "beef-wellington" },
+    "category": "Main Course",
+    "price": 75.0,
+    "originalPrice": 85.0,
+    "tags": ["British", "Gourmet"],
+    "image": "https://images.unsplash.com/photo-1624726175512-19b9baf9fbd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Tender beef fillet wrapped in puff pastry with mushroom duxelles and prosciutto.",
+    "available": true
+  },
+  {
+    "name": "Miso Ramen",
+    "slug": { "current": "miso-ramen" },
+    "category": "Soup",
+    "price": 44.0,
+    "originalPrice": 50.0,
+    "tags": ["Japanese", "Comfort Food"],
+    "image": "https://images.unsplash.com/photo-1623341214825-9f4f963727da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Hearty soup with miso-based broth, ramen noodles, soft-boiled egg, and chashu pork.",
+    "available": true
+  },
+  {
+    "name": "Lemon Cheesecake",
+    "slug": { "current": "lemon-cheesecake" },
+    "category": "Dessert",
+    "price": 30.0,
+    "originalPrice": 35.0,
+    "tags": ["Tangy", "Sweet"],
+    "image": "https://images.unsplash.com/photo-1524351199678-941a58a3df50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "description": "Creamy cheesecake with a tangy lemon flavor, served on a graham cracker crust.",
+    "available": true
+  }
+]
+

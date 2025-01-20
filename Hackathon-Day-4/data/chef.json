@@ -1,0 +1,113 @@
+[
+    {
+      "name": "Tahmina Rumi",
+      "position": "Head Chef",
+      "experience": 12,
+      "specialty": "Italian Cuisine",
+      "image": "http://localhost:3000/chef/r1.png",
+      "description": "Expert in crafting authentic Italian dishes and pastries.",
+      "available": true
+    },
+    {
+      "name": "Jorina Begum",
+      "position": "Sous Chef",
+      "experience": 8,
+      "specialty": "Pastry and Desserts",
+      "image": "http://localhost:3000/chef/r2.png",
+      "description": "Specializes in creative pastries and dessert innovations.",
+      "available": true
+    },
+    {
+      "name": "M. Mohammad",
+      "position": "Grill Master",
+      "experience": 10,
+      "specialty": "Grilled Dishes",
+      "image": "http://localhost:3000/chef/r3.png",
+      "description": "Renowned for creating perfectly grilled meats and vegetables.",
+      "available": true
+    },
+    {
+      "name": "Martin Kathy",
+      "position": "Culinary Instructor",
+      "experience": 15,
+      "specialty": "Asian Fusion",
+      "image": "http://localhost:3000/chef/r4.png",
+      "description": "Pioneer in Asian fusion dishes blending traditional flavors with modern techniques.",
+      "available": true
+    },
+    {
+      "name": "Tahmina Rumi",
+      "position": "Asian Foof Expert",
+      "experience": 15,
+      "specialty": "Asian Fusion",
+      "image": "http://localhost:3000/chef/r5.png",
+      "description": "Pioneer in Asian fusion dishes blending traditional flavors with modern techniques.",
+      "available": true
+    },
+    {
+      "name": "Bisnu Bengol",
+      "position": "Executive Chef",
+      "experience": 20,
+      "specialty": "Global Cuisine",
+      "image": "http://localhost:3000/chef/r6.png",
+      "description": "Expert in international cuisines and menu planning.",
+      "available": true
+    },
+    {
+      "name": "Mottin Mollahd",
+      "position": "Culinary Specialist",
+      "experience": 18,
+      "specialty": "Main Course Specialist",
+      "image": "http://localhost:3000/chef/r7.png",
+      "description": "Craft delicious dishes and curate memorable dining experiences with passion and precision.",
+      "available": true
+    },
+    {
+      "name": "William Rumi",
+      "position": "Chef de Cuisine",
+      "experience": 8,
+      "specialty": "Seafood Specialties",
+      "image": "http://localhost:3000/chef/r8.png",
+      "description": "Master of crafting exquisite seafood dishes with unique flavors.",
+      "available": true
+    },
+    {
+      "name": "Kate William Roy",
+      "position": "Kitchen Maestro ",
+      "experience": 14,
+      "specialty": "Culnary Expert",
+      "image": "http://localhost:3000/chef/r9.png",
+      "description": "Create culinary masterpieces and lead the kitchen with creativity and expertise.",
+      "available": true
+    },
+    {
+      "name": "Mahmud kholi",
+      "position": "Culinary Artist",
+      "experience": 15,
+      "specialty": "Culnary Expert",
+      "image": "http://localhost:3000/chef/r10.png",
+      "description": "Design and prepare exquisite dishes that delight the senses and elevate dining experiences.",
+      "available": true
+    },
+    {
+      "name": "Altair Rahman",
+      "position": "Dishes Specialist",
+      "experience": 12,
+      "specialty": "Dishes Specialist",
+      "image": "http://localhost:3000/chef/r11.png",
+      "description": "Ensure spotless, organized dishware and maintain kitchen cleanliness to support seamless operations.",
+      "available": true
+    },
+    {
+      "name": "Mostaba holly",
+      "position": "Dessert Specialist",
+      "experience": 17,
+      "specialty": "Desseets",
+      "image": "http://localhost:3000/chef/r12.png",
+      "description": " Craft delectable desserts and sweet treats, adding a perfect finishing touch to every meal.",
+      "available": true
+    }
+    ]
+
+
+  

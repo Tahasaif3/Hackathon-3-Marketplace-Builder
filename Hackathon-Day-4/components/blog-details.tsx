@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import Footer from "./footer"
-import { Calendar, User, MessageSquare, Search, Facebook, Twitter, Instagram } from 'lucide-react'
+import { Calendar, User, MessageSquare, Search, Facebook, Twitter, Instagram } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "./ui/button"
 import { MdShoppingCartCheckout } from "react-icons/md"
@@ -36,42 +36,46 @@ const defaultPost: BlogPost = {
   content: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non tellus, fermentum nec imperdiet sed, pulvinar et sem. Fusce hendrerit faucibus sollicitudin.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non tellus, fermentum nec imperdiet sed, pulvinar et sem. Fusce hendrerit faucibus sollicitudin.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non tellus, fermentum nec imperdiet sed, pulvinar et sem. Fusce hendrerit faucibus sollicitudin."
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non tellus, fermentum nec imperdiet sed, pulvinar et sem. Fusce hendrerit faucibus sollicitudin.",
   ],
-  quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+  quote:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
   image: "/blog-image.jpg",
-  tags: ["Restaurant", "Dinner", "Pizza", "Yummy"]
+  tags: ["Restaurant", "Dinner", "Pizza", "Yummy"],
 }
 
 export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
+    setIsMenuOpen((prev) => !prev)
+  }
 
   const comments = [
     {
       id: 1,
       author: "MD Sajib Khan",
       date: "June 22, 2020",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non tellus, fermentum nec imperdiet sed, pulvinar et sem. Fusce hendrerit faucibus sollicitudin.",
-      avatar: "/comment1.png?height=40&width=40"
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non tellus, fermentum nec imperdiet sed, pulvinar et sem. Fusce hendrerit faucibus sollicitudin.",
+      avatar: "/comment1.png?height=40&width=40",
     },
     {
       id: 2,
       author: "MD Moon Khan",
       date: "June 22, 2020",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non tellus, fermentum nec imperdiet sed, pulvinar et sem. Fusce hendrerit faucibus sollicitudin.",
-      avatar: "/comment2.png?height=40&width=40"
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non tellus, fermentum nec imperdiet sed, pulvinar et sem. Fusce hendrerit faucibus sollicitudin.",
+      avatar: "/comment2.png?height=40&width=40",
     },
     {
       id: 3,
       author: "MD Gull Khan",
       date: "June 22, 2020",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non tellus, fermentum nec imperdiet sed, pulvinar et sem. Fusce hendrerit faucibus sollicitudin.",
-      avatar: "/comment3.png?height=40&width=40"
-    }
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non tellus, fermentum nec imperdiet sed, pulvinar et sem. Fusce hendrerit faucibus sollicitudin.",
+      avatar: "/comment3.png?height=40&width=40",
+    },
   ]
 
   const menuCategories = [
@@ -79,30 +83,30 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
     { name: "Burger Food", count: 45, image: "/filter2.png?height=50&width=50" },
     { name: "Pizza", count: 16, image: "/filter3.png?height=50&width=50" },
     { name: "Fresh Fruits", count: 36, image: "/filter4.png?height=50&width=50" },
-    { name: "Vegetables", count: 16, image: "/filter5.png?height=50&width=50" }
+    { name: "Vegetables", count: 16, image: "/filter5.png?height=50&width=50" },
   ]
 
   const recentPosts = [
     {
       title: "Lorem ipsum dolor sit cing elit, sed do.",
       date: "June 22, 2020",
-      image: "/recent1.png?height=80&width=80"
+      image: "/recent1.png?height=80&width=80",
     },
     {
       title: "Lorem ipsum dolor sit cing elit, sed do.",
       date: "June 22, 2020",
-      image: "/recent2.png?height=80&width=80"
+      image: "/recent2.png?height=80&width=80",
     },
     {
       title: "Lorem ipsum dolor sit cing elit, sed do.",
       date: "June 22, 2020",
-      image: "/recent3.png?height=80&width=80"
+      image: "/recent3.png?height=80&width=80",
     },
     {
       title: "Lorem ipsum dolor sit cing elit, sed do.",
       date: "June 22, 2020",
-      image: "/recent4.png?height=80&width=80"
-    }
+      image: "/recent4.png?height=80&width=80",
+    },
   ]
 
   return (
@@ -113,22 +117,53 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
             <span className="text-orange-500 font-bold text-2xl">Food</span>luck
           </div>
 
-          <button
-            className="md:hidden text-white"
-            onClick={toggleMenu}
-          >
+          <button className="md:hidden text-white" onClick={toggleMenu}>
             <AiOutlineMenu />
           </button>
-          <ul className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-6 text-white justify-center items-center w-full md:w-auto`}>
+          <ul
+            className={`${isMenuOpen ? "block" : "hidden"} md:flex space-y-4 md:space-y-0 md:space-x-4 lg:space-x-6 text-white justify-center items-center w-full md:w-auto mt-4 md:mt-0 pb-4 md:pb-0`}
+          >
             <br />
-            <li><Link href="/" className="hover:text-orange-500">Home</Link></li>
-            <li><Link href="/Menu" className="hover:text-orange-500">Menu</Link></li>
-            <li><Link href="/Blog" className="hover:text-orange-500">Blog</Link></li>
-            <li><Link href="/Pages" className="hover:text-orange-500">Pages</Link></li>
-            <li><Link href="/About" className="hover:text-orange-500">About</Link></li>
-            <li><Link href="/Shop" className="hover:text-orange-500">Shop</Link></li>
-            <li><Link href="/Chef" className="hover:text-orange-500">Chef</Link></li>
-            <li><Link href="/contact" className="hover:text-orange-500">Contact</Link></li>
+            <li>
+              <Link href="/" className="hover:text-orange-500">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/Menu" className="hover:text-orange-500">
+                Menu
+              </Link>
+            </li>
+            <li>
+              <Link href="/Blog" className="hover:text-orange-500">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/Pages" className="hover:text-orange-500">
+                Pages
+              </Link>
+            </li>
+            <li>
+              <Link href="/About" className="hover:text-orange-500">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/Shop" className="hover:text-orange-500">
+                Shop
+              </Link>
+            </li>
+            <li>
+              <Link href="/Chef" className="hover:text-orange-500">
+                Chef
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-orange-500">
+                Contact
+              </Link>
+            </li>
           </ul>
           <div className="w-full md:w-auto flex items-center justify-between md:justify-end space-x-4 mt-4 md:mt-0">
             <div className="relative flex-grow md:flex-grow-0">
@@ -158,14 +193,8 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
         </nav>
       </header>
 
-      <div className="relative h-48 md:h-64 bg-gray-800">
-        <Image
-          src="/heroo.png?height=256&width=1920"
-          alt="Menu Hero"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
+      <div className="relative h-40 sm:h-48 md:h-64 bg-gray-800">
+        <Image src="/heroo.png?height=256&width=1920" alt="Menu Hero" layout="fill" objectFit="cover" priority />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <h1 className="text-3xl md:text-4xl font-bold text-white text-center">Blog-Details</h1>
           <p className="text-sm md:text-base text-white mt-2">
@@ -174,12 +203,12 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8 md:py-16">
-        <div className="grid md:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
           <div className="md:col-span-2">
             <article className="bg-white rounded-lg overflow-hidden shadow-sm">
               <Image
-                src={post.image}
+                src={post.image || "/placeholder.svg"}
                 alt={post.title}
                 width={800}
                 height={400}
@@ -203,44 +232,46 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
                 <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">{post.title}</h1>
 
                 {post.content.map((paragraph, index) => (
-                  <p key={index} className="text-gray-600 mb-4">{paragraph}</p>
+                  <p key={index} className="text-gray-600 mb-4">
+                    {paragraph}
+                  </p>
                 ))}
 
-                <blockquote className="bg-orange-500 text-white p-4 md:p-6 rounded-lg my-6 md:my-8">
-                  <div className="flex items-start gap-2">
+                <blockquote className="bg-orange-500 text-white p-4 sm:p-6 rounded-lg my-4 sm:my-6 md:my-8">
+                  <div className="flex items-start gap-2 sm:gap-4">
                     <Image
                       src="/Quotes.png"
                       alt="Quote Icon"
-                      width={48}
-                      height={48}
-                      className="flex-shrink-0"
+                      width={36}
+                      height={36}
+                      className="flex-shrink-0 w-8 h-8 sm:w-12 sm:h-12"
                     />
-                    <p className="text-xl">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-                    </p>
+                    <p className="text-base sm:text-lg md:text-xl">{post.quote}</p>
                   </div>
                 </blockquote>
 
-
                 <p className="text-gray-600 mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                  dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                  rebum.
                 </p>
 
                 <div className="my-8 flex flex-col md:flex-row items-start">
                   {/* Content on the left */}
                   <div className="w-full md:w-1/2 text-gray-600 mb-4 md:pr-4">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy
-                      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod tempor invidunt ut
+                      labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                      dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
                       amet. Lorem ipsum dolor sit amet.
                     </p>
                     <p className="mt-4">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy
-                      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod tempor invidunt ut
+                      labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                      dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
                       amet. Lorem ipsum dolor sit amet.
                     </p>
                   </div>
@@ -257,32 +288,32 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
                   </div>
                 </div>
 
-
-
                 <p className="text-gray-600 mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                  dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                  rebum.
                 </p>
 
                 <p className="text-gray-600 mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                  labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                  et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                  dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                  rebum.
                 </p>
 
                 <div className="flex flex-wrap items-center justify-between border-t border-b py-4 mt-6 md:mt-8">
                   <div className="flex items-center gap-2 mb-2 md:mb-0">
-                    <Image
-                      src="/taggs.png"
-                      alt="tags"
-                      width={297}
-                      height={24}
-                    />
+                    <Image src="/taggs.png" alt="tags" width={297} height={24} />
                   </div>
                   <div className="flex items-center gap-4">
                     <span className="text-gray-600">Share:</span>
                     <div className="flex gap-2">
-                      <Link
-                        href="#"
-                        className="text-gray-400 hover:text-orange-500 flex justify-center items-center"
-                      >
+                      <Link href="#" className="text-gray-400 hover:text-orange-500 flex justify-center items-center">
                         <Facebook />
                         <Twitter />
                         <Instagram />
@@ -295,22 +326,22 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
 
             <div className="mt-8 md:mt-12 bg-white rounded-lg shadow-sm p-4 md:p-6">
               <h3 className="text-xl font-semibold mb-4 md:mb-6">Comments - {comments.length}</h3>
-              <div className="space-y-4 md:space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {comments.map((comment) => (
-                  <div key={comment.id} className="flex gap-4">
-                    <Avatar>
+                  <div key={comment.id} className="flex gap-3 sm:gap-4 p-2 sm:p-0">
+                    <Avatar className="w-10 h-10 sm:w-12 sm:h-12">
                       <AvatarImage src={comment.avatar} alt={comment.author} />
                       <AvatarFallback>{comment.author[0]}</AvatarFallback>
                     </Avatar>
                     <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-semibold">{comment.author}</h4>
-                        <Button variant="ghost" size="sm" className="text-orange-500">
+                      <div className="flex items-center justify-between mb-1 sm:mb-2">
+                        <h4 className="font-semibold text-sm sm:text-base">{comment.author}</h4>
+                        <Button variant="ghost" size="sm" className="text-orange-500 text-sm">
                           Reply
                         </Button>
                       </div>
-                      <p className="text-sm text-gray-500 mb-1">{comment.date}</p>
-                      <p className="text-gray-600">{comment.content}</p>
+                      <p className="text-xs sm:text-sm text-gray-500 mb-1">{comment.date}</p>
+                      <p className="text-sm sm:text-base text-gray-600">{comment.content}</p>
                     </div>
                   </div>
                 ))}
@@ -319,17 +350,26 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
 
             <div className="mt-8 md:mt-12 bg-white rounded-lg shadow-sm p-4 md:p-6">
               <h3 className="text-xl font-semibold mb-4 md:mb-6">Post a comment</h3>
-              <form className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <input placeholder="Name*" required className="w-full p-2 border rounded" />
-                  <input type="email" placeholder="Email*" required className="w-full p-2 border rounded" />
+              <form className="space-y-4 px-2 sm:px-0">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <input
+                    placeholder="Name*"
+                    required
+                    className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email*"
+                    required
+                    className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  />
                 </div>
                 <textarea
                   placeholder="Write a comment"
-                  className="w-full p-2 border rounded min-h-[150px]"
+                  className="w-full p-3 border rounded min-h-[120px] sm:min-h-[150px] focus:outline-none focus:ring-2 focus:ring-orange-500"
                   required
                 />
-                <Button className="w-full md:w-auto bg-orange-500 hover:bg-orange-600 text-white">
+                <Button className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white px-6 py-3">
                   Post comment
                 </Button>
               </form>
@@ -341,31 +381,12 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
               <input
                 type="text"
                 placeholder="Search Your Keyword.."
-                className="flex-grow px-4 w-[300px]  bg-transparent h-[90px] py-3 text-gray-600 focus:outline-none"
+                className="flex-grow px-4 py-3 sm:py-4 bg-transparent text-gray-600 focus:outline-none text-sm sm:text-base"
               />
-
-             
-              <button
-                className="flex items-center justify-center w-24 h-24 bg-orange-500"
-                style={{ backgroundColor: "#FFC107" }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="white"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M11 19a8 8 0 100-16 8 8 0 000 16zm5-5l4 4"
-                  />
-                </svg>
+              <button className="flex items-center justify-center w-16 sm:w-24 h-16 sm:h-24 bg-orange-500">
+                <Search className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </button>
             </div>
-
 
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm text-center">
               <Avatar className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4">
@@ -376,7 +397,12 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
               <p className="text-sm text-gray-500">Blogger/Photographer</p>
               <div className="flex justify-center gap-1 my-2">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <svg
+                    key={i}
+                    className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 ))}
@@ -407,7 +433,7 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
                 {recentPosts.map((post, index) => (
                   <Link key={index} href="#" className="flex gap-4 group">
                     <Image
-                      src={post.image}
+                      src={post.image || "/placeholder.svg"}
                       alt={post.title}
                       width={80}
                       height={80}
@@ -431,7 +457,7 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
                   <div key={category.name} className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <Image
-                        src={category.image}
+                        src={category.image || "/placeholder.svg"}
                         alt={category.name}
                         width={50}
                         height={50}
@@ -448,12 +474,7 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
             </div>
 
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm">
-              <Image
-                src="/tags.png"
-                alt="tags"
-                width={325}
-                height={244}
-              />
+              <Image src="/tags.png" alt="tags" width={325} height={244} />
             </div>
 
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm">
@@ -468,12 +489,7 @@ export default function BlogDetails({ post = defaultPost }: BlogDetailsProps) {
               </div>
               <h2 className="font-semibold mb-4 mt-4 ml-4 md:ml-6">Follow us</h2>
               <div className="flex justify-center gap-4">
-                <Image
-                  src="/icin.png"
-                  alt="icons"
-                  width={308}
-                  height={47}
-                />
+                <Image src="/icin.png" alt="icons" width={308} height={47} />
               </div>
             </div>
           </div>

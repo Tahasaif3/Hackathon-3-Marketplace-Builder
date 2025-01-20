@@ -202,7 +202,7 @@ export default function ShopPageClient({ products: initialProducts }: { products
             </li>
           </ul>
 
-          <div className="w-full md:w-auto flex flex-wrap items-center justify-between md:justify-end space-x-2 md:space-x-4 mt-4 md:mt-0">
+          <div className="w-full md:w-auto flex items-center justify-between md:justify-end space-x-2 md:space-x-4 mt-4 md:mt-0">
             <div className="relative flex-grow md:flex-grow-0">
               <input
                 type="text"

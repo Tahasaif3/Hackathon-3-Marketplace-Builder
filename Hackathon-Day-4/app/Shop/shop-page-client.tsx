@@ -12,6 +12,18 @@ import { FaShoppingBag, FaUser } from "react-icons/fa"
 import { AiOutlineMenu } from "react-icons/ai"
 import { PriceRangeFilter } from "@/components/price-range-filter"
 
+interface Recommendation {
+  name: string;
+  slug: string;
+  category: string;
+  price: number;
+  originalPrice: number;
+  tags: string[];
+  image: string;
+  description: string;
+  available: boolean;
+}
+
 const categories = [
   "Sandwiches",
   "Burger",
@@ -58,6 +70,8 @@ export default function ShopPageClient({ products: initialProducts }: { products
   const [sidebarSearchQuery, setSidebarSearchQuery] = useState("")
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 8000])
+  const [searchQuery, setSearchQuery] = useState("");
+  const [recommendations, setRecommendations] =  useState<Recommendation[]>([]);
 
 
   useEffect(() => {
@@ -103,6 +117,27 @@ export default function ShopPageClient({ products: initialProducts }: { products
       return newCategories
     })
   }
+  //@ts-expect-error: Unreachable code error
+  const fetchRecommendations = async (query) => {
+    try {
+      const response = await fetch(`/api/foods?search=${query}`);
+      const data: Recommendation[] = await response.json();
+      setRecommendations(data);
+    } catch (error) {
+      console.error("Error fetching recommendations:", error);
+    }
+  };
+
+  const handleSearchBox = async (e:React.ChangeEvent<HTMLInputElement>) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+
+    if (query.length > 0) {
+      await fetchRecommendations(query);
+    } else {
+      setRecommendations([]);
+    }
+  };
 
   const filteredProducts = products.filter((product) => {
     const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(product.category)
@@ -112,7 +147,7 @@ export default function ShopPageClient({ products: initialProducts }: { products
       (product.description && product.description.toLowerCase().includes(sidebarSearchQuery.toLowerCase())) ||
       (product.tags && product.tags.some((tag) => tag.toLowerCase().includes(sidebarSearchQuery.toLowerCase())))
     const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1]
-
+    console.log(matchesPrice)
     return matchesCategory && matchesSearch
   })
 
@@ -207,9 +242,28 @@ export default function ShopPageClient({ products: initialProducts }: { products
               <input
                 type="text"
                 placeholder="Search..."
+                value={searchQuery}
+                onChange={handleSearchBox}
                 className="w-full md:w-auto bg-gray-800 rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm"
               />
               <Search className="absolute right-3 top-2.5 text-gray-400" size={18} />
+
+              {recommendations.length > 0 && (
+        <ul className="absolute z-10 bg-gray-800 rounded-lg mt-2 w-full shadow-lg">
+          {recommendations.map((item, index) => (
+            <li
+              key={index}
+              className="py-2 px-4 hover:bg-gray-700 cursor-pointer text-sm text-gray-300"
+              onClick={() => {
+                setSearchQuery(item.name); // Use the `name` property of the object
+                setRecommendations([]); // Clear recommendations
+              }}
+            >
+              {item.name} {/* Render the specific property (e.g., name) */}
+            </li>
+          ))}
+        </ul>
+      )}
             </div>
             <Link href="/ShoppingCart">
               <button className="bg-gray-800 p-2 rounded-full">
@@ -367,8 +421,8 @@ export default function ShopPageClient({ products: initialProducts }: { products
               </div>
 
               <div className="mb-6">
-                <PriceRangeFilter minPrice={0} maxPrice={8000} 
-                onPriceChange={setPriceRange} />
+                <PriceRangeFilter minPrice={0} maxPrice={8000}
+                  onPriceChange={setPriceRange} />
               </div>
 
               <div className="mb-6">
@@ -417,9 +471,8 @@ export default function ShopPageClient({ products: initialProducts }: { products
             <button
               key={i}
               onClick={() => handlePageChange(i + 1)}
-              className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded ${
-                i + 1 === currentPage ? "bg-orange-500 text-white" : "bg-gray-100 text-orange-500"
-              }`}
+              className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded ${i + 1 === currentPage ? "bg-orange-500 text-white" : "bg-gray-100 text-orange-500"
+                }`}
             >
               <span className="text-xs sm:text-sm md:text-lg font-semibold">{i + 1}</span>
             </button>

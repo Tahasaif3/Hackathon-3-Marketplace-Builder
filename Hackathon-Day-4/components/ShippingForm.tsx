@@ -165,7 +165,7 @@ export default function ShippingForm({
                   className="form-radio h-5 w-5 text-orange-600"
                 />
                 <span className="text-sm font-medium text-gray-900">{rate.service}</span>
-                <span className="text-sm text-gray-500">${rate.rate.toFixed(2)} - {rate.estimatedDays}</span>
+                <span className="text-sm text-gray-500">${rate.rate.toFixed(2)} - {rate.estimatedTime}</span>
               </label>
             ))}
           </div>

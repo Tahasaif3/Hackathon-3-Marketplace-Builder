@@ -2,25 +2,27 @@ import { ShippingFormData, ShippingRate } from "@/types/shipping"
 
 const shippingRates: ShippingRate[] = [
   {
-    id: 'standard',
-    service: 'Standard Shipping',
+    id: "regular",
+    service: "Regular Delivery",
+    rate: 2.99,
+    estimatedTime: "45-60 minutes",
+    description: "Affordable delivery for orders that are not time-sensitive.",
+  },
+  {
+    id: "priority",
+    service: "Priority Delivery",
     rate: 5.99,
-    estimatedDays: '5-7 business days'
+    estimatedTime: "30-45 minutes",
+    description: "Faster delivery for hot and fresh meals.",
   },
   {
-    id: 'express',
-    service: 'Express Shipping',
-    rate: 14.99,
-    estimatedDays: '2-3 business days'
+    id: "express",
+    service: "Express Delivery",
+    rate: 9.99,
+    estimatedTime: "20-30 minutes",
+    description: "Fastest delivery option for urgent orders.",
   },
-  {
-    id: 'overnight',
-    service: 'Overnight Shipping',
-    rate: 29.99,
-    estimatedDays: '1 business day'
-  }
-]
-
+];
 export async function getShippingRates(address?: Partial<ShippingFormData>): Promise<ShippingRate[]> {
   
   if (!address || (address.city && address.zipCode)) {
@@ -39,7 +41,7 @@ export async function createShipment(
     success: true,
     tracking_code: 'TRK' + Math.random().toString(36).substring(2, 10).toUpperCase(),
     service: selectedRate.service,
-    estimated_delivery: getEstimatedDeliveryDate(selectedRate.estimatedDays)
+    estimated_delivery: getEstimatedDeliveryDate(selectedRate.estimatedTime)
   }
 }
 
@@ -60,35 +62,47 @@ interface ShipmentResponse {
 
 export async function getTrackingInfo(trackingNumber: string) {
   await new Promise(resolve => setTimeout(resolve, 1000))
-  console.log(trackingNumber)
-  
-  const currentDate = new Date()
-  const yesterday = new Date(currentDate)
-  yesterday.setDate(yesterday.getDate() - 1)
+  console.log(`Tracking Order ID: ${trackingNumber}`);
+
+
+  const currentDate = new Date();
+  const orderReceivedTime = new Date(currentDate);
+  orderReceivedTime.setMinutes(orderReceivedTime.getMinutes() - 45);
+
+  const orderPreparedTime = new Date(orderReceivedTime);
+  orderPreparedTime.setMinutes(orderPreparedTime.getMinutes() + 15); 
+
+  const orderPickedUpTime = new Date(orderPreparedTime);
+  orderPickedUpTime.setMinutes(orderPickedUpTime.getMinutes() + 15); 
+
+  const orderOutForDeliveryTime = new Date(orderPickedUpTime);
+  orderOutForDeliveryTime.setMinutes(orderOutForDeliveryTime.getMinutes() + 10);
   
   return {
-    status: 'In Transit',
-    location: 'Local Distribution Center',
+    status: "Out for Delivery",
+    location: "Near Your Address",
     timestamp: currentDate.toISOString(),
     details: [
       {
-        status: 'Package received at distribution center',
-        location: 'Local Distribution Center',
-        timestamp: currentDate.toISOString()
+        status: "Order is out for delivery",
+        location: "Delivery Driver En Route",
+        timestamp: orderOutForDeliveryTime.toISOString(),
       },
       {
-        status: 'Package picked up by courier',
-        location: 'Regional Facility',
-        timestamp: yesterday.toISOString()
+        status: "Order picked up by the delivery driver",
+        location: "Restaurant",
+        timestamp: orderPickedUpTime.toISOString(),
       },
       {
-        status: 'Shipping label created',
-        location: 'Seller Facility',
-        timestamp: yesterday.toISOString()
-      }
-    ]
-  }
+        status: "Order prepared and packed",
+        location: "Kitchen",
+        timestamp: orderPreparedTime.toISOString(),
+      },
+      {
+        status: "Order received",
+        location: "Restaurant",
+        timestamp: orderReceivedTime.toISOString(),
+      },
+    ],
+  };
 }
-
-
-

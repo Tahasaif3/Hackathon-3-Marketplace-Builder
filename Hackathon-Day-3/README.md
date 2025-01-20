@@ -14,6 +14,15 @@ GROQ queries for efficient and precise data fetching
 Another step closer to completing this incredible project. Let me know your thoughts or share tips on API integration and migrations! 💡
  
 📸 See it here: https://lnkd.in/eyqnq3bP 
+
+---
+
+## 🌐 Live Demo
+
+Check out the live demo: [Elite Restaurant Website](https://hackathon-3-marketplace-builder.vercel.app/)
+
+---
+
  
 Ameen Alam | Hamzah Syed | Hamza Alvi | Asharib Ali | Fahad Khan | Daniyal Nagori
 

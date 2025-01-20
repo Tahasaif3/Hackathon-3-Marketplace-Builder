@@ -166,6 +166,12 @@ To set up the project locally, follow these steps:
 
 ---
 
+## 🌐 Live Demo
+
+Check out the live demo: [Elite Restaurant Website](https://food-deleivery-website-phi.vercel.app) 
+
+---
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

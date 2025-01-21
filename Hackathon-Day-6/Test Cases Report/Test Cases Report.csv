@@ -1,0 +1,26 @@
+Test Case ID,Test Description,Steps,Expected Result,Actual Result,Status,Severity,Remarks
+TC001,Verify Product Page,Open product page,Product details load correctly,Product details loaded successfully,Passed,Low,Success
+TC002,Add to Cart,Click 'Add to Cart',Product added to cart,Product successfully added to cart,Passed,Low,Success
+TC003,Price Display,Open product page,Prices display accurately,Prices displayed correctly,Passed,Low,Success
+TC004,Empty Cart,Go to cart,'No items in cart' message displays,No items in cart message displayed,Passed,Low,Success
+TC005,Checkout Workflow,Complete checkout flow,Checkout completes without errors,Checkout completed successfully,Passed,High,Success
+TC006,Real-Time Updates,Update Sanity backend,UI reflects changes instantly,Changes reflected instantly,Passed,Medium,Success
+TC007,User Authentication,Login with valid credentials,User logs in successfully,Login successful,Passed,High,Success
+TC008,Add Product to Wishlist,Click 'Add to Wishlist',Product added to wishlist,Product added successfully,Passed,Low,Success
+TC009,Search Functionality,Search for a product,Relevant products are displayed,Relevant products displayed,Passed,Medium,Success
+TC010,Cart Persistence,Add product to cart,Cart persists after page reload,Cart persists correctly,Passed,Medium,Success
+TC011,Checkout Form Validation,Submit form with missing information,Form displays error messages,Error messages displayed,Passed,High,Success
+TC012,Responsive Design,View on mobile device,Page layout adjusts for mobile,Page layout adjusted correctly,Passed,Low,Success
+TC013,Real-Time Stock Updates,Add product to cart,Stock availability is updated in real-time,Stock updated in real-time,Passed,Medium,Success
+TC014,Product Detail,Click on product detail,Product details are displayed correctly,Product details displayed correctly,Passed,Low,Success
+TC015,Product Filter,Apply product filter,Filtered products are displayed correctly,Filtered products displayed correctly,Passed,Medium,Success
+TC016,Related Products,Click on related products section,Related products are shown correctly,Related products shown correctly,Passed,Low,Success
+TC017,User Profile,Edit user profile,User profile updated successfully,Profile updated successfully,Passed,High,Success
+TC018,Checkout Payment Integration,Proceed to payment,Payment gateway works correctly,Payment gateway worked correctly,Passed,High,Success
+TC019,Order Confirmation,Complete purchase,Order confirmation page appears,Order confirmed successfully,Passed,High,Success
+TC020,Review Submission,Submit product review,Review is submitted successfully,Review submitted successfully,Passed,Low,Success
+TC021,Error Handling,Trigger an error,Error message is displayed,Error message displayed,Passed,High,Success
+TC022,Social Media Sharing,Click share on social media,Content is shared successfully,Content shared successfully,Passed,Low,Success
+TC023,Gift Card Redemption,Enter gift card code,Gift card is redeemed successfully,Gift card redeemed successfully,Passed,Medium,Success
+TC024,Notifications,Add to cart,Notification is displayed for cart action,Notification displayed successfully,Passed,Low,Success
+TC025,Discount Application,Apply discount code,Discount is applied successfully,Discount applied correctly,Passed,Medium,Success
